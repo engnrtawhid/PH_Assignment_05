@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Something New</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Tailwind and Daisy CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+    <!-- Shared Styles -->
+    <style>
+        .font-poppins{
+            font-family: "Poppins", sans-serif;
+        }
+    </style> 
+</head>
+<body class="bg-[#F4F7FF]">
+    <section class="max-w-screen-2xl mx-auto min-h-screen">
+        <header class="py-5">
+            <!-- Nav section -->
+            <nav class="py-5 px-5 rounded-xl flex justify-between items-center bg-white">
+                <!-- logo -->
+                <div class="flex justify-between items-center gap-3">
+                    <img src="./assets/logo.png" alt="">
+                    <h1 class="text-4xl font-thin">Dev<span class="font-bold">Board</span></h1>
+                </div>
+                <!-- back to desk button -->
+                <div>
+                    <button id="back-to-desk" class="text-xl font-extrabold bg-blue-700 text-white px-5 py-2 rounded-xl cursor-pointer">Back To Desk</button>
+                </div>
+            </nav>
+            <div class="text-center py-8">
+                <h1 class="text-5xl font-normal">Blogs</h1>
+            </div>
+        </header>
+        <main>
+            <!-- Question Cards Container -->
+            <div>
+                <!-- Question 1 card-->
+                <div class="bg-white rounded-xl mb-5">
+                    <div class="border-b border-dashed border-gray-300">
+                        <h1 class="px-4 py-8 text-3xl font-semibold">Question-1: What are the different ways to select an element in the DOM?</h1>
+                    </div>
+                    <p class="px-4 py-8 text-2xl text-gray-500">we can select a DOM element by getElementById, getElementsByClassName, getElementsByTagName, querySelector, or querySelectorAll.</p>
+                </div>
+                <!-- Question 2 card -->
+                <div class="bg-white rounded-xl mb-5">
+                    <div class="border-b border-dashed border-gray-300">
+                        <h1 class="px-4 py-8 text-3xl font-semibold">Question-2: What is the difference between innerHTML, innerText, and textContent?</h1>
+                    </div>
+                    <ul class="px-4 py-8 text-2xl text-gray-500">
+                        <li><span class="font-semibold">innerHTML: </span>it reads both the HTML markup and the text content of the element.</li>
+                        <li><span class="font-semibold">innerText:</span> it returns the text as it appears on screen. It ignores HTML tags.</li>
+                        <li><span class="font-semibold">textContent:</span> it returns only the text. Whiles innerText reads text as it is rendered on screen.</li>
+                    </ul>
+                </div> 
+                <!-- Question 3 card -->
+                <div class="bg-white rounded-xl mb-5">
+                    <div class="border-b border-dashed border-gray-300">
+                        <h1 class="px-4 py-8 text-3xl font-semibold">Question-3: What is event delegation in the DOM?</h1>
+                    </div>
+                    <p class="px-4 py-8 text-2xl text-gray-500">Event delegation is a technique where a parent element handles events for its child elements using a single event listener. This works because events bubble up from child to parent, allowing dynamic elements to be handled efficiently.</p>
+                </div> 
+                <!-- Question 4 card -->
+                <div class="bg-white rounded-xl mb-5">
+                    <div class="border-b border-dashed border-gray-300">
+                        <h1 class="px-4 py-8 text-3xl font-semibold">Question-4: What is event bubbling in the DOM?</h1>
+                    </div>
+                    <p class="px-4 py-8 text-2xl text-gray-500">Event bubbling is when an event starts from the target element and moves up to its parent elements. This means if you click a button inside a div, the event first affects the button, then the div, and then higher elements.</p>
+                </div> 
+                <!-- Question 5 card -->
+                <div class="bg-white rounded-xl mb-5">
+                    <div class="border-b border-dashed border-gray-300">
+                        <h1 class="px-4 py-8 text-3xl font-semibold">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+                    </div>
+                    <p class="px-4 py-8 text-2xl text-gray-500">You create an element using a JavaScript function, then add it to a parent element, and remove it by calling a remove function. This helps in dynamically changing the webpage content.</p>
+                </div> 
+            </div> 
+        </main>
+    </section>
+
+
+    <script src="./script/blog.js"></script>
+</body>
+</html>

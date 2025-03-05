@@ -6,6 +6,8 @@ const clearHistory = document.getElementById('clear-history');
 const navTaskCount = document.getElementById('nav-task-count');
 const activityLog = document.getElementById('activity-log');
 const activityTitle= document.querySelectorAll('.activity-title');
+const discover = document.getElementById('discover-button');
+
 
 
 for(let i=0; i<taskButton.length; i++){
@@ -39,26 +41,26 @@ for(let i=0; i<taskButton.length; i++){
             second: "2-digit",
             hour12: true,
             };
-            newElement.innerHTML = `
-            <p class="bg-[#F4F7FF] rounded-md px-5 py-2 text-[16px] mb-5">
-                  You have Complete The Task <strong> ${title} </strong > at ${date.toLocaleTimeString(
-            "en-US",
-            option
-            )}
-              </p>
-            `;
+            newElement.innerHTML = `<p class="bg-[#F4F7FF] rounded-md px-5 py-2 text-[16px] mb-5">You have Complete The Task <strong> ${title} </strong> at ${date.toLocaleTimeString("en-US", option)}
+            </p>`;
             activityLog.appendChild(newElement);
       
         }
     )
 }
 
-
-
-
+// Clear History
 clearHistory.addEventListener('click',
     function(){
         activityLog.innerHTML = '';
+    }
+)
+
+
+// Go to Blog Section
+discover.addEventListener('click',
+    function(){
+        window.location.href = "./blog.html"
     }
 )
 
